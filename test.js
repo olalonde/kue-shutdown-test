@@ -32,6 +32,12 @@ test('shutdown queue', (t) => {
   })
 })
 
-test('the process will not exit :(', (t) => {
+test('killing process after 20s if not exited yet', (t) => {
+  // since we call .unref(), the process will exit
+  // if the timeout is the only thing left in event loop
+  setTimeout(() => {
+    t.fail('Process did not automatically shutdown')
+    process.exit(0)
+  }, 20 * 1000).unref()
   t.end()
 })
