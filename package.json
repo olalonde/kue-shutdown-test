@@ -1,0 +1,15 @@
+{
+  "name": "kue-shutdown-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "author": "Oli Lalonde <olalonde@gmail.com> (https://syskall.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "kue": "^0.11.6",
+    "tape": "^4.6.3"
+  }
+}
